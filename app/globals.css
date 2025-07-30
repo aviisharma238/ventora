@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeInUp 0.6s ease-out both;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px) scale(0.98);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+}
+
+@layer components {
+  .card-style {
+    @apply bg-gray-100 dark:bg-gray-800 rounded-2xl p-6 transition-all duration-300 transform hover:scale-[1.02] hover:shadow-lg;
+  }
+}
+
+
+  /* loop animations left / right */
+@keyframes scroll-loop-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-loop-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-scroll-loop-left {
+  animation: scroll-loop-left 40s linear infinite;
+}
+
+.animate-scroll-loop-right {
+  animation: scroll-loop-right 40s linear infinite;
+}
+
+
+@layer utilities {
+  .snake-border {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    z-index: -1;
+  }
+
+  .group\/title:hover .snake-border {
+    animation: snake-glow 1s linear forwards;
+    border-color: #3b82f6;
+  }
+
+  @keyframes snake-glow {
+    0% {
+      border-color: transparent;
+      clip-path: inset(0 100% 100% 0);
+    }
+    25% {
+      clip-path: inset(0 0 100% 0);
+    }
+    50% {
+      clip-path: inset(0 0 0 0);
+    }
+    75% {
+      clip-path: inset(0 0 0 0);
+    }
+    100% {
+      clip-path: inset(0 0 0 0);
+    }
+  }
+}
