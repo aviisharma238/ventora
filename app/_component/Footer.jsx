@@ -1,7 +1,8 @@
 import React from 'react';
 import { Send } from 'lucide-react';
 import { Instagram, Linkedin, Github, Facebook } from 'lucide-react';
-
+import { RiWhatsappLine, RiPhoneFill } from "react-icons/ri";
+import { IoMdMailUnread } from "react-icons/io";
 export default function Footer() {
   return (
     <footer className="bg-black text-white px-6 py-10 lg:px-16">
@@ -23,10 +24,16 @@ export default function Footer() {
 
         {/* Contact Info */}
         <div className="space-y-3">
-          <h4 className="font-semibold">Call Us</h4>
+          <div className="flex items-center gap-2">
+          <RiPhoneFill/>
+          <h4 className="font-semibold">Call Us </h4>
+          </div>
           <p className="text-sm text-gray-300">+91 8839845153, +91 7879434673</p>
-
-          <h4 className="font-semibold mt-6">Email Us</h4>
+          
+          <div className="flex items-center gap-2">
+          <IoMdMailUnread />
+          <h4 className="font-semibold ">Email Us</h4>
+          </div>
           <p className="text-sm text-gray-300">ventora.vista@gmail.com</p>
         </div>
 

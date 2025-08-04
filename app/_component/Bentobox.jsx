@@ -19,7 +19,7 @@ function VentoraGrid() {
   }, []);
 
   return (
-    <div className="min-h-screen px-4 py-10 flex items-center justify-center text-black dark: transition-colors duration-300">
+    <div className="min-h-screen px-4 flex items-center justify-center text-black dark: transition-colors duration-300">
       <div
         className="w-full max-w-5xl grid gap-4
         grid-cols-1

@@ -19,7 +19,7 @@ function Header() {
 
   return (
     <header
-      className={` fixed top-0 left-0 z-50 transition-all duration-300 ${
+      className={` fixed top-0 left-0 z-50 transition-all duration-500 ${
         scrolled
           ? "w-[75%] top-4 left-1/2 transform -translate-x-1/2 rounded-full backdrop-blur-md bg-white/20 dark:bg-black/30 py-2 px-6 shadow-md"
           : "w-full bg-transparent py-4 px-6"
