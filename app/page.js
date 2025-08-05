@@ -1,5 +1,5 @@
 
-import Hero from "./_component/Hero";
+import Hero1 from "./_component/Hero";
 import Bentobox from "./_component/Bentobox";
 import ServiceSection from "./_component/ServiceSection";
 import Teamsection from "./_component/Teamsection";
@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div className="bg-black text-white    relative ">
       
-      
+      <Hero1 />
       <Bentobox />
       <ServiceSection />
       <Teamsection />

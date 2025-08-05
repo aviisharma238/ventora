@@ -76,13 +76,13 @@ function Header() {
                 : "border-transparent hover:text-blue-500"
             }`}
           >
-            <a href="/Contact">Contact</a>
+            <a href="/contact">Contact</a>
           </li>
         </ul>
 
         {/* Contact Button (Right - pushed to edge) */}
         <div className="hidden lg:flex ml-auto">
-          <a href="/contact.html">
+          <a href="/contact">
             <button className="flex items-center gap-2 bg-blue-600 px-6 py-2 rounded-3xl text-white font-medium hover:shadow-lg hover:bg-blue-700 transition-all">
               Contact Us
               <div className="bg-white text-blue-600 rounded-full w-6 h-6 flex items-center justify-center">
