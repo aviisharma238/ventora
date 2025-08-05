@@ -17,7 +17,7 @@ export default function ContactSection() {
   e.preventDefault();
 
   try {
-    const res = await fetch("https://vb-cqpw.onrender.com/api/contact", {
+    const res = await fetch("https://vb-83dq.onrender.com/api/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
