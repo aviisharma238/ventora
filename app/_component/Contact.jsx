@@ -17,7 +17,7 @@ export default function ContactSection() {
   e.preventDefault();
 
   try {
-    const res = await fetch("https://script.google.com/macros/s/AKfycbyibBxtrsipyUxyzYmaox4tevKSt2wIB7t8-NzRisAC4QsfY5lchnL6KIXeznhE9JFrpQ/exec", {
+    const res = await fetch("http://localhost:5000/api/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -28,13 +28,12 @@ export default function ContactSection() {
     const result = await res.json();
     console.log(result);
 
-    if (result.result === "Success") {
+    if (res.ok) {
       alert("Message sent successfully 💌");
+      setFormData({ name: "", email: "", phone: "", message: "" });
     } else {
       alert("Something went wrong 😔");
     }
-
-    setFormData({ name: "", email: "", phone: "", message: "" });
 
   } catch (error) {
     console.error("ERROR:", error);
