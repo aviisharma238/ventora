@@ -20,7 +20,7 @@ export default function Footer() {
     setMessage("");
 
     try {
-      const res = await fetch('http://localhost:5000/subscribe', { // change to deployed API
+      const res = await fetch('https://vb-6enm.onrender.com/subscribe', { // change to deployed API
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email }),
@@ -137,7 +137,7 @@ export default function Footer() {
               )}
             </button>
           </div>
-          {message && <p className="text-sm text-green-400 mt-2">{message}</p>}
+          {message && <p className="text-sm text-blue-600 mt-2">{message}</p>}
         </div>
       </div>
       
