@@ -4,6 +4,8 @@ import Header from "./_component/Header";
 import Footer from "./_component/Footer";
 import "aos/dist/aos.css";
 import { RiWhatsappLine, RiPhoneFill } from "react-icons/ri";
+import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -45,6 +47,8 @@ export default function RootLayout({ children }) {
         <RiPhoneFill className="text-3xl" />
       </a>
     </div>
+    <Analytics/>
+    <SpeedInsights/>
         <Header />
         {children}
         <Footer />
