@@ -37,7 +37,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="py-10 ">
+    <section className="py-10">
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold mb-2 relative inline-block">
           Services
@@ -49,17 +49,16 @@ export default function Services() {
       </div>
 
       {/* Service Cards */}
-      <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
         {services.map((service, index) => (
           <div
             key={index}
-            className="group bg-[#1f1f1f] rounded-2xl p-6 border border-transparent hover:border-blue-600 transition-all duration-300 hover:shadow-[0_0_25px_rgba(59,130,246,0.5)] transform hover:-translate-y-1 flex flex-col"
+            className="bg-[#1f1f1f] rounded-2xl p-6 border border-transparent hover:border-blue-600 transition-all duration-300 hover:shadow-[0_0_25px_rgba(59,130,246,0.5)] transform hover:-translate-y-1 flex flex-col"
           >
-            {/* Title + line below */}
+            {/* Title */}
             <h3 className="text-xl font-bold text-white text-center mb-4 relative">
-              <span className="relative z-10 px-3 py-1 inline-block group/title">
+              <span className="relative z-10 px-3 py-1 inline-block">
                 {service.title}
-                <span className="snake-border"></span>
               </span>
             </h3>
 
@@ -75,13 +74,16 @@ export default function Services() {
             {/* Description */}
             <p className="text-sm text-gray-400 mb-6">{service.desc}</p>
 
-            {/* Centered button at the bottom */}
+            {/* Button */}
             <div className="mt-auto flex justify-center">
-              <button className="group bg-gradient-to-r from-blue-700 to-blue-600 hover:from-blue-600 hover:to-blue-800 font-semibold py-2 px-5 rounded-full inline-flex items-center gap-2 transition-all duration-300 overflow-hidden">
-                <span className="transition-all duration-300 group-hover:translate-x-1">
+              <button className="relative group bg-gradient-to-r from-blue-700 to-blue-600 hover:from-blue-600 hover:to-blue-800 font-semibold py-2 px-6 rounded-full inline-flex items-center justify-center transition-all duration-300 overflow-hidden w-[160px] h-[44px]">
+                {/* Centered Text with subtle shift on hover */}
+                <span className="transition-transform duration-300 group-hover:-translate-x-2 z-10">
                   Get Details
                 </span>
-                <ArrowRight className="w-4 h-4 transform transition-all duration-300 opacity-0 -translate-x-2 group-hover:translate-x-0 group-hover:opacity-100" />
+
+                {/* Arrow — absolutely positioned on right side, only shows on hover */}
+                <ArrowRight className="absolute right-4 opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 z-10" />
               </button>
             </div>
           </div>

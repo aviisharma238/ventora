@@ -37,11 +37,11 @@ export default function TeamSection() {
           <div>
             <p className="text-gray-400 text-lg font-semibold">Our Team</p>
             <h2 className="text-4xl sm:text-5xl font-bold mt-2 leading-tight">
-              Let’s Meet Our <span className="text-blue-500">Dev N Dez</span> Innovators
+              Let’s Meet Our <span className="text-blue-500">Ventora</span> Innovators
             </h2>
           </div>
           <p className="max-w-xl text-white/80 text-base">
-            Our talented DevnDez team is a group of innovative thinkers and skilled professionals
+            Our talented Ventora team is a group of innovative thinkers and skilled professionals
             dedicated to transforming your ideas into reality. With expertise in Web Development,
             Graphic Design, and User Interface Designing & User Experience Research, we ensure
             exceptional results for every project we undertake.
@@ -53,25 +53,34 @@ export default function TeamSection() {
           {team.map((member, index) => (
             <div
               key={index}
-              className={`relative bg-gradient-to-r ${member.color} rounded-3xl p-8 pb-16 min-h-[220px] overflow-visible`}
+              className={`group relative bg-gradient-to-r ${member.color} rounded-3xl min-h-[260px] overflow-hidden flex transition-transform hover:scale-[1.02] duration-300`}
             >
-              {/* Image on top right */}
-              <img
-                src={member.img}
-                alt={member.name}
-                className="absolute right-4 sm:right-6 h-[200px] sm:h-[240px] z-10 object-contain"
-              />
-
-              {/* Info */}
-              <div className="z-20">
-                <h3 className="text-xl sm:text-2xl font-bold mb-2">{member.name}</h3>
-                <p className="text-white/90 mb-4 text-sm sm:text-base">{member.role}</p>
-                <div className="flex gap-4 text-white text-xl">
-                  <FaYoutube className="hover:text-red-400 cursor-pointer" />
-                  <FaLinkedin className="hover:text-blue-300 cursor-pointer" />
-                  <FaGithub className="hover:text-gray-300 cursor-pointer" />
-                  <FaInstagram className="hover:text-pink-400 cursor-pointer" />
+              {/* Left Content */}
+              <div className="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  {/* Name and underline */}
+                  <div className="relative">
+                    <h3 className="text-xl sm:text-2xl font-bold mb-1">{member.name}</h3>
+                    <span className="block h-[2px] w-48 bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                  </div>
+                  <p className="text-white/90 mb-4 text-sm sm:text-base">{member.role}</p>
                 </div>
+                {/* Icons */}
+                <div className="flex gap-4 text-white text-3xl">
+                  <FaYoutube className="hover:text-black cursor-pointer" />
+                  <FaLinkedin className="hover:text-black cursor-pointer" />
+                  <FaGithub className="hover:text-black cursor-pointer" />
+                  <FaInstagram className="hover:text-black cursor-pointer" />
+                </div>
+              </div>
+
+              {/* Right Side Image with drop shadow */}
+              <div className="w-[180px] sm:w-[220px] flex items-end justify-end pr-4 pb-4">
+                <img
+                  src={member.img}
+                  alt={member.name}
+                  className="h-[200px] sm:h-[230px] object-cover rounded-2xl shadow-[0_10px_40px_rgba(255,255,255,0.2)] transition-transform duration-300"
+                />
               </div>
             </div>
           ))}
