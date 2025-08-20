@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
 import { Copy } from "lucide-react";
-import DotBackground from "./DotBackground"; // ✅ Import added
-import {FloatingPaper} from "./FloatingPaper";
+import DotBackground from "../bg/DotBackground"; // ✅ Import added
+import {FloatingPaper} from "../bg/FloatingPaper";
 
 function Hero() {
   const [copied, setCopied] = useState(false);

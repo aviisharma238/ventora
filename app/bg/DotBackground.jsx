@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 
-const NUM_DOTS = 100;
+const NUM_DOTS = 200;
 const MAX_RADIUS = 2;
 const INTERACTION_RADIUS = 150; // px
 const SPEED_BOOST = 16; // multiplier when near cursor

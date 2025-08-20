@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 
-export function FloatingPaper({ count = 6 }) {
+export function FloatingPaper({ count = 9 }) {
   const [boxes, setBoxes] = useState([]);
 
   useEffect(() => {
